@@ -1,21 +1,21 @@
-let val 
+// Arrays
 
-// Number to string 
+let numbers = [32,43,234,23,234,4]
+let val
 
-// val = String(5)  
-val = String(4+4233)  
+console.log(numbers)
 
-val = String(true)
-
-// Array to string
-val =  String([1,2,4,4,5,6])
-
-val = parseInt('100.30')
-val = parseFloat('100.30')
+numbers.sort(function(x, y){
+  return y - x  
+})
 
 
+// find functions 
+function under50(num) {
+  return num < 50
+}
 
+val = numbers.find(under50)
+
+console.log(numbers)
 console.log(val)
-console.log(typeof val)
-// console.log(val.length)
-console.log(val.toFixed())
