@@ -1,21 +1,30 @@
-// Arrays
+// Object Literals
+const person =  {
+  firstName : 'steve',
+  lastName : 'john',
+  email : 'steve@gmail.com',
+  city : 'miami',
+  age : 30,
+  getBirthYear : function(){
+    return 2017 - this.age
+  },
+  hobbies : ['football', 'wrestling']
 
-let numbers = [32,43,234,23,234,4]
-let val
-
-console.log(numbers)
-
-numbers.sort(function(x, y){
-  return y - x  
-})
-
-
-// find functions 
-function under50(num) {
-  return num < 50
 }
 
-val = numbers.find(under50)
+val = person.hobbies[1]
+val = person.getBirthYear()
 
-console.log(numbers)
+
+
 console.log(val)
+
+const people = [
+  {name: 'john', age: 30},
+  {name: 'mike', age: 33},
+  {name: 'nancy', age: 40}
+]
+
+for(let i = 0; i < people.length; i++) {
+  console.log(people[i].name)
+}
