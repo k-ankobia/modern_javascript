@@ -1,15 +1,32 @@
-let val 
+// create element
 
-const list = document.querySelector('ul.collection')
-const listItem = document.querySelector('li.collection-item:first-child')
+const li = document.createElement('li')
 
-val = listItem
-val = list
+// Add class 
+li.className = 'collection-item'
 
-// GET CHILD NODES
-val = list.childNodes
+// Add attribute 
+li.setAttribute('title', 'New Item')
 
-// GET CHILDREN ELEMENT NODES 
-// val = list.children 
+// Create text node and append
+li.appendChild(document.createTextNode('Hello World'))
 
-console.log(val) 
+// Append li as child to ul 
+document.querySelector('ul.collection').appendChild(li)
+
+
+
+// Create 'x'  new link element
+const link = document.createElement('a')
+
+// Add class 
+link.className = 'delete-item secondary-content'
+
+// Add icon HTML 
+link.innerHTML = '<i class="fa fa-remove"></i>'
+
+// Append link into li
+li.appendChild(link)
+
+
+console.log(li)
