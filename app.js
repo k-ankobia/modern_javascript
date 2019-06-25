@@ -1,87 +1,50 @@
-// LOOP AND ITERATIONS 
+// WINDOW METHODS / OBJECTS / PROPERTIES 
 
 
-// FOR LOOP 
+// ALERT
 
-// for(let i = 0; i < 10; i ++){
-//   if( i === 2){
-//     console.log("2 is the magic number") 
-//     continue
-//   } 
-//   if (i === 5) {
-//     console.log("stop the loop")
-//     break
-//   }
-//   console.log('Number ' + i)
+// alert(' Hello World')
+
+// PROMPT 
+// const input = prompt()
+// console.log(input)
+
+// CONFIRM 
+
+// if(confirm('Are you sure ?')){
+//   console.log('YES')
+// } else {
+//   console.log('No')
 // }
 
+// PROPERTIES 
 
-// WHILE LOOP
-
-// let i = 0 
-
-// while (i < 10) {
-//   console.log('Number ' + i)
-//   i++
-// }
+let val 
+val = window.outerWidth
+val = window.innerWidth
 
 
-// DO WHILE
+//  scroll points 
 
-// let i = 0 
-
-// do {
-//   console.log('Number ' + i)
-//   i++
-// }
-
-// while(i < 10)
-
-// LOOP THROUGH ARRAYS 
-
-// const cars = ['ford', 'honda', 'chevvy', 'mercedes' ]
-
-// for(let i = 0; i < cars.length; i++) {
-//   console.log(cars[i])
-// }
-
-// FOR EARCH LOOP THROUGH ARRAYS 
-
-const cars = ['ford', 'honda', 'chevvy', 'mercedes' ]
-
-// cars.forEach(function(car, index, array){
-//   console.log(`${index} : ${car}`)
-//   console.log(array)
-// })
-
-// cars.forEach( car => {
-//   console.log(car)
-// });
-
-// MAP 
-
-// const users = [
-//   {id:1, name:'john'},
-//   {id:2, name: 'bismark'},
-//   {id:3, name: 'richard'}
-// ]
-
-// const ids = users.map(function(user){
-//   return user.name
-// })
-
-// console.log(ids)
+val = window.scrollY 
+val = window.location
+val = window.location.hostname
+val = window.location.href
+val = window.location.search
 
 
-// FOR IN LOOP 
-// wwhere x will give the keys 
+// Redirect
+// window.location.href ='http://google.com'
+// Reload
+// window.location.reload()
 
-const user = { 
-  firstName : 'John',
-  lastName : 'Bismark',
-  age : 40
-}
+// NAVIGATOR OBJECT 
 
-for(let x in user){
-  console.log(`${x} : ${user[x]}`)
-}
+val = window.navigator
+val = window.navigator.appName
+val = window.navigator.userAgent
+val = window.navigator.platform
+val = window.navigator.vendor
+val = window.navigator.language
+
+console.log(val)
