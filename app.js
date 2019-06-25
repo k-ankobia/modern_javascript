@@ -1,20 +1,27 @@
-const clearBtn = document.querySelector('.clear-tasks')
-const card = document.querySelector('.card')
+const form = document.querySelector('form')
+const taskInput = document.getElementById('task')
 const heading = document.querySelector('h5')
 
+// Clear input 
+taskInput.value = ''
+// form.addEventListener('submit', runEvent)
 
-// click 
-// clearBtn.addEventListener('click', runEvent)
-// clearBtn.addEventListener('dblclick', runEvent)
-// clearBtn.addEventListener('mousedown', runEvent)
-clearBtn.addEventListener('mouseup', runEvent)
+// Keydown
+// taskInput.addEventListener('keydown', runEvent)
 
-card.addEventListener('mousemove', runEvent)
+// Keyup
+// taskInput.addEventListener('keyup', runEvent)
+
+// Keypress
+taskInput.addEventListener('keypress', runEvent)
+
 function runEvent(e){
-  e.preventDefault()
-  console.log(` EVENT TYPE : ${e.type}`)
+  // e.preventDefault()
 
-  heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`
+  console.log(`EVENT TYPE: ${e.type}`)
 
-  document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 45)`
+  heading.innerText = e.target.value
+  // Get the task input
+  // console.log(taskInput.value)
+  console.log(e.target.value)
 }
