@@ -1,10 +1,14 @@
-// Date and time 
+// If functions 
 
-let val 
+// if (condition) {
+  
+// } else {
+  
+// }
 
-const today = new Date()
-const birthday = new Date('9-10-1981 11:25:00')
-val = birthday 
+// TERNARY OPERATOR
 
-console.log(val)
+const id = 100
+
+console.log(id === 100 ? 'correct' : 'incorrect')
 
