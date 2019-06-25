@@ -1,14 +1,7 @@
-// If functions 
+// Function Declartion with defaults
 
-// if (condition) {
-  
-// } else {
-  
-// }
+function greet(firstname = 'john', lastname = 'Doe') {
+  return `Hello ${firstname} ${lastname}`
+}
 
-// TERNARY OPERATOR
-
-const id = 100
-
-console.log(id === 100 ? 'correct' : 'incorrect')
-
+console.log(greet('richard', 'dickson'))
