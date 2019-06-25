@@ -1,36 +1,52 @@
-// DOM SELECTORS
+// document.getElementsByClassName
 
-// document.getElementById()
-
-let val
-
-// val = document.getElementById('task-title')
-
-// const taskTitle = document.getElementById('task-title')
-
-// // changing styling
-// taskTitle.style.background = '#333'
-// taskTitle.style.color = '#fff'
-// taskTitle.style.padding = '5px'
-// // taskTitle('task-title').style.display = 'none'
+// let items = document.getElementsByClassName('collection-item')
+// console.log(items[0])
+// items[0].style.color = 'red'
+// items[3].textContent = 'Hello World'
 
 
-// // changning content 
+// const listItems = document.querySelector('ul').getElementsByClassName('collection-item')
 
-// taskTitle.textContent = 'Task List'
-// taskTitle.innerText = 'My Task'
-// taskTitle.innerHTML = '<span style ="color:red"> Task List </span>'
+// console.log(listItems)
 
-// DOCUMENT.QUERYSELECTOR()
+//document.getElementByTagName
 
+// let lis = document.getElementsByTagName('li')
+// // console.log(lis[0])
+// lis[0].style.color = 'red'
+// lis[3].textContent = 'Hello World'
 
-// console.log(document.querySelector('#task-title'))
-// console.log(document.querySelector('.card-title'))
-// console.log(document.querySelector('h5'))
+// console.log(lis)
+// // Convert HTML Collection into array
+// lis = Array.from(lis)
 
-document.querySelector('li').style.color = 'red'
-document.querySelector('li:last-child').style.color = 'blue'
-document.querySelector('li:nth-child(3)').style.color = 'green'
-document.querySelector('li:nth-child(4)').textContent = 'Hello World'
-document.querySelector('li:nth-child(odd)').style.background= '#ccc'
-document.querySelector('li:nth-child(even)').style.background = '#f4f4f4'
+// lis.reverse()
+
+// lis.forEach(function(li) {
+//   console.log(li.className)
+//   li.textContent = 'Hello'
+// })
+// console.log(lis)
+
+// QUERYSELECTORALL
+// this produces a nodelist
+
+const items = document.querySelectorAll('ul.collection li.collection-item')
+console.log(items)
+
+items.forEach(function(item) {
+    item.textContent = 'Test'
+  })
+
+  const liOdd = document.querySelectorAll('li:nth-child(odd')
+  const liEven = document.querySelectorAll('li:nth-child(even')
+
+liOdd.forEach(function(li) {
+  li.style.background = '#ccc'
+})
+
+for(let i =0; i < liEven.length; i++){
+  console.log('test')
+  liEven[i].style.background = '#f4f4f4'
+}
