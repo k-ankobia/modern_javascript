@@ -1,26 +1,20 @@
-// EVENT LISTENERS 
+const clearBtn = document.querySelector('.clear-tasks')
+const card = document.querySelector('.card')
+const heading = document.querySelector('h5')
 
-// document.querySelector('.clear-tasks').addEventListener('click', function(e){
-//   e.preventDefault()
 
-//   console.log('Hello World')
-// })
+// click 
+// clearBtn.addEventListener('click', runEvent)
+// clearBtn.addEventListener('dblclick', runEvent)
+// clearBtn.addEventListener('mousedown', runEvent)
+clearBtn.addEventListener('mouseup', runEvent)
 
-document.querySelector('.clear-tasks').addEventListener('click', onClick)
-
-function onClick(e){
+card.addEventListener('mousemove', runEvent)
+function runEvent(e){
   e.preventDefault()
-  // console.log('Hello World')
+  console.log(` EVENT TYPE : ${e.type}`)
 
-  let val 
-  
-  // event target element 
-  val = e.target.className
-  val = e.target.classList
+  heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`
 
-  e.target.innerText = 'Hello'
-  
-
-
-  console.log(val)
+  document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 45)`
 }
