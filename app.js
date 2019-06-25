@@ -1,50 +1,87 @@
-// Function Declartion with defaults
+// LOOP AND ITERATIONS 
 
-// function greet(firstname = 'john', lastname = 'Doe') {
-//   return `Hello ${firstname} ${lastname}`
+
+// FOR LOOP 
+
+// for(let i = 0; i < 10; i ++){
+//   if( i === 2){
+//     console.log("2 is the magic number") 
+//     continue
+//   } 
+//   if (i === 5) {
+//     console.log("stop the loop")
+//     break
+//   }
+//   console.log('Number ' + i)
 // }
 
-// console.log(greet('richard', 'dickson'))
 
+// WHILE LOOP
 
-// USING CONST TO DECLARE FUNCTIONS
-// const multiply = function(x = 2)  {
-//   return x * x
-// }
-// console.log(multiply())
+// let i = 0 
 
-// ES6 DECLARATION 
-
-// const add = (x =2 ) => {
-//   return x + x 
+// while (i < 10) {
+//   console.log('Number ' + i)
+//   i++
 // }
 
-// console.log(add())
+
+// DO WHILE
+
+// let i = 0 
+
+// do {
+//   console.log('Number ' + i)
+//   i++
+// }
+
+// while(i < 10)
+
+// LOOP THROUGH ARRAYS 
+
+// const cars = ['ford', 'honda', 'chevvy', 'mercedes' ]
+
+// for(let i = 0; i < cars.length; i++) {
+//   console.log(cars[i])
+// }
+
+// FOR EARCH LOOP THROUGH ARRAYS 
+
+const cars = ['ford', 'honda', 'chevvy', 'mercedes' ]
+
+// cars.forEach(function(car, index, array){
+//   console.log(`${index} : ${car}`)
+//   console.log(array)
+// })
+
+// cars.forEach( car => {
+//   console.log(car)
+// });
+
+// MAP 
+
+// const users = [
+//   {id:1, name:'john'},
+//   {id:2, name: 'bismark'},
+//   {id:3, name: 'richard'}
+// ]
+
+// const ids = users.map(function(user){
+//   return user.name
+// })
+
+// console.log(ids)
 
 
-// IMMEDIATELY INVOKABLE FUNCTION EPRESSIONS - IFFES
+// FOR IN LOOP 
+// wwhere x will give the keys 
 
-// (function(name){
-//   console.log('IFFE Ran...' + name)
-// })('kwaku');
-
-// PROPERTY METHODS FOR OBJECTS
-
-const todo = {
-  add: function() {
-    console.log('Add todo...')
-  }, 
-  edit: function(id){
-    console.log(`Edit todo ${id}`)
-  }
+const user = { 
+  firstName : 'John',
+  lastName : 'Bismark',
+  age : 40
 }
 
-todo.delete = function() {
-  console.log('Delte todo...')
+for(let x in user){
+  console.log(`${x} : ${user[x]}`)
 }
-
-todo.add()
-todo.edit(2)
-todo.delete()
-
-console.log(todo)
