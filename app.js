@@ -1,50 +1,31 @@
-// WINDOW METHODS / OBJECTS / PROPERTIES 
+//SCOPE 
 
+// global score 
 
-// ALERT
+var a = 1 
+let b = 2
+const c = 3 
 
-// alert(' Hello World')
-
-// PROMPT 
-// const input = prompt()
-// console.log(input)
-
-// CONFIRM 
-
-// if(confirm('Are you sure ?')){
-//   console.log('YES')
-// } else {
-//   console.log('No')
+// FUNCTION SCOPE
+// function test() {
+//   var a = 4 
+//   let b = 5
+//   const c = 6 
+//   console.log('Function scope: ', a, b, c)
 // }
 
-// PROPERTIES 
+// test()
 
-let val 
-val = window.outerWidth
-val = window.innerWidth
+// BLOCK SCOPE 
+// if(true) {
+//   // Block Scope 
+//   var a = 4 
+//   let b = 5
+//   const c = 6
+//   console.log('If scope: ', a, b, c)
+// }
 
-
-//  scroll points 
-
-val = window.scrollY 
-val = window.location
-val = window.location.hostname
-val = window.location.href
-val = window.location.search
-
-
-// Redirect
-// window.location.href ='http://google.com'
-// Reload
-// window.location.reload()
-
-// NAVIGATOR OBJECT 
-
-val = window.navigator
-val = window.navigator.appName
-val = window.navigator.userAgent
-val = window.navigator.platform
-val = window.navigator.vendor
-val = window.navigator.language
-
-console.log(val)
+for(let a = 0; a < 10; a++) {
+  console.log(`${a}`)
+}
+console.log('Global scope: ', a, b, c)
